@@ -5,12 +5,11 @@ async function example_async() {
   // Start the prompt.
   prompt.start();
 
-  // Get two properties from the user: the `username` and `email`.
+  // Get one property from the user: the `userName`
   const { userName } = await prompt.get(['userName']);
 
   // Log the results.
-  console.log('Ditt namn är: ');
-  console.log(`  username: ${userName},`);
+  console.log(`Ditt namn är: ${userName}`);
 }
 
 async function error_handling_async() {
