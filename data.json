@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "question": "Anonyma vittnen ska tillåtas i domstolar.",
+    "answer": {
+      "V": -2,
+      "S": -2,
+      "MP": -2,
+      "C": -2,
+      "L": -1,
+      "KD": 2,
+      "M": 2,
+      "SD": 2
+    }
+  },
+  {
+    "id": 2,
+    "Kvinnans aborträtt ska skrivas in i grundlagen.": ""
+  },
+  {
+    "id": 3,
+    "Företagens skatter ska sänkas.": ""
+  },
+  {
+    "id": 4,
+    "Skogsägare ska få stärkt äganderätt.": ""
+  },
+  { "id": 5, "En särskild miljonärsskatt ska införas.": "" },
+  {
+    "id": 6,
+    "En ny folkräkning ska genomföras.": ""
+  },
+  {
+    "id": 7,
+    "Företagens regelbörda ska minska. ": ""
+  },
+  {
+    "id": 8,
+    "Biståndet ska sänkas.": ""
+  },
+  {
+    "id": 9,
+    "Tandvård ska subventioneras som sjukvård.": ""
+  },
+  {
+    "id": 10,
+    "Fri hyressättning ska införas.": ""
+  },
+  {
+    "id": 11,
+    "Mångkulturen berikar Sverige.": ""
+  },
+  {
+    "id": 12,
+    "Färre företag ska vara momspliktiga.": ""
+  },
+  {
+    "id": 13,
+    "Ränteavdraget för bostadslån ska trappas ned.": ""
+  },
+  {
+    "id": 14,
+    "Kärnkraften ska byggas ut.": ""
+  },
+  {
+    "id": 15,
+    "Föräldraförsäkringen ska delas lika mellan föräldrarna.": ""
+  },
+  {}
+]
