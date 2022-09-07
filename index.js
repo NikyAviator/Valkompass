@@ -11,4 +11,4 @@ let person = new Person();
 let question = new Question();
 person.getName();
 const answers = question.questions();
-compareWithParties(answers);
+const questionDistancesList = compareWithParties(answers);
