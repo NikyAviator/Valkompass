@@ -1,6 +1,6 @@
 const questionData = require('./data.json');
 const promptly = require('promptly');
-
+const Result = require('./Result');
 module.exports = class Question {
   onesAnswer = [];
 
@@ -18,6 +18,8 @@ module.exports = class Question {
       );
       this.onesAnswer.push(response);
     }
-    return this.onesAnswer;
+    let result = new Result();
+    const finalResult = result.compareWithParties(this.onesAnswer);
+    console.log(finalResult);
   }
 };
