@@ -4,5 +4,8 @@ const promptly = require('promptly');
 const Person = require('./Person');
 
 module.exports = class Valkompassen {
-  constructor() {}
+  constructor(settings) {
+    // expecting userName
+    Object.assign(this, settings);
+  }
 };

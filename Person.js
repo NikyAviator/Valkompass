@@ -6,7 +6,7 @@ module.exports = class Person {
   }
 
   async getName() {
-    const name = await promptly.prompt('Namn: ');
+    const name = promptly.prompt('Namn: ');
     console.log(
       `Välkommen ${name}, till Valkompassen 2022! Nedan kommer 30 st frågor. Svara med siffror`
     );
