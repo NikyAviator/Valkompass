@@ -1,23 +1,12 @@
-const prompt = require('prompt-async');
+const Question = require('./Question');
+const questionData = require('./data.json');
+const Valkompassen = require('./Valkompassen');
+const promptly = require('promptly');
+const Person = require('./Person');
+// let valkompassen = new Valkompassen(questionData);
+// valkompassen(questionData);
 
-async function example_async() {
-  // Available only with `prompt-async`!
-  // Start the prompt.
-  prompt.start();
-
-  // Get one property from the user: the `userName`
-  const { userName } = await prompt.get(['userName']);
-
-  // Log the results.
-  console.log(`Ditt namn är: ${userName}`);
-}
-
-async function error_handling_async() {
-  try {
-    await example_async();
-  } catch (error) {
-    console.error('An error occurred: ', error);
-  }
-}
-
-error_handling_async();
+let person = new Person();
+let question = new Question();
+person.getName();
+question.questions();
