@@ -20,6 +20,9 @@ module.exports = class Question {
     }
     let result = new Result();
     const finalResult = result.compareWithParties(this.onesAnswer);
-    console.log(finalResult);
+    const sortedFinalResult = Object.fromEntries(
+      Object.entries(finalResult).sort(([, a], [, b]) => b - a)
+    );
+    console.log(sortedFinalResult);
   }
 };

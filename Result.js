@@ -23,7 +23,7 @@ module.exports = class Result {
           L: this.calcPercent(Math.abs(answers['L'] - myAnswer)),
           KD: this.calcPercent(Math.abs(answers['KD'] - myAnswer)),
           M: this.calcPercent(Math.abs(answers['M'] - myAnswer)),
-          SD: this.calcPercent(Math.abs(answers['SD'] - myAnswer)),
+          SD: this.calcPercent(Math.abs(answers['SD'] - myAnswer)), // answers['SD'] null or undefined
         },
       };
       questionDistancesList.push(questionDistances);
@@ -49,7 +49,7 @@ module.exports = class Result {
         finalResult['KD'] + questionDistancesList[i].answer.KD;
       finalResult['M'] = finalResult['M'] + questionDistancesList[i].answer.M;
       finalResult['SD'] =
-        finalResult['SD'] + questionDistancesList[i].answer.SD;
+        finalResult['SD'] + questionDistancesList[i].answer.SD; // can be null or undefined
     }
     finalResult['V'] = finalResult['V'] / 30;
     finalResult['S'] = finalResult['S'] / 30;
