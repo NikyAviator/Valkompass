@@ -39,6 +39,7 @@ module.exports = class Result {
       SD: 0,
     };
     for (let i = 0; i < questionDistancesList.length; i++) {
+      // finalResult.V += questionDistancesList[i].answer.V;
       finalResult['V'] = finalResult['V'] + questionDistancesList[i].answer.V;
       finalResult['S'] = finalResult['S'] + questionDistancesList[i].answer.S;
       finalResult['MP'] =
@@ -49,16 +50,16 @@ module.exports = class Result {
         finalResult['KD'] + questionDistancesList[i].answer.KD;
       finalResult['M'] = finalResult['M'] + questionDistancesList[i].answer.M;
       finalResult['SD'] =
-        finalResult['SD'] + questionDistancesList[i].answer.SD; // can be null or undefined
+        finalResult['SD'] + (questionDistancesList[i].answer.SD || 0); // can be null or undefined
     }
-    finalResult['V'] = finalResult['V'] / 30;
-    finalResult['S'] = finalResult['S'] / 30;
-    finalResult['MP'] = finalResult['MP'] / 30;
-    finalResult['C'] = finalResult['C'] / 30;
-    finalResult['L'] = finalResult['L'] / 30;
-    finalResult['KD'] = finalResult['KD'] / 30;
-    finalResult['M'] = finalResult['M'] / 30;
-    finalResult['SD'] = finalResult['SD'] / 30;
+    finalResult['V'] = (finalResult['V'] / 30) * 100;
+    finalResult['S'] = (finalResult['S'] / 30) * 100;
+    finalResult['MP'] = (finalResult['MP'] / 30) * 100;
+    finalResult['C'] = (finalResult['C'] / 30) * 100;
+    finalResult['L'] = (finalResult['L'] / 30) * 100;
+    finalResult['KD'] = (finalResult['KD'] / 30) * 100;
+    finalResult['M'] = (finalResult['M'] / 30) * 100;
+    finalResult['SD'] = (finalResult['SD'] / 30) * 100;
 
     return finalResult;
   }
