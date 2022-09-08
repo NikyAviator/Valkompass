@@ -20,14 +20,14 @@ module.exports = class Result {
         id: partiesAnswers[i].id,
         question: partiesAnswers[i].question,
         answer: {
-          V: this.calcPercent(Math.abs(answers['V'] - myAnswer)),
-          S: this.calcPercent(Math.abs(answers['S'] - myAnswer)),
-          MP: this.calcPercent(Math.abs(answers['MP'] - myAnswer)),
-          C: this.calcPercent(Math.abs(answers['C'] - myAnswer)),
-          L: this.calcPercent(Math.abs(answers['L'] - myAnswer)),
-          KD: this.calcPercent(Math.abs(answers['KD'] - myAnswer)),
-          M: this.calcPercent(Math.abs(answers['M'] - myAnswer)),
-          SD: this.calcPercent(Math.abs(answers['SD'] - myAnswer)),
+          V: this.calcPercent(Math.abs(answers.V - myAnswer)),
+          S: this.calcPercent(Math.abs(answers.S - myAnswer)),
+          MP: this.calcPercent(Math.abs(answers.MP - myAnswer)),
+          C: this.calcPercent(Math.abs(answers.C - myAnswer)),
+          L: this.calcPercent(Math.abs(answers.L - myAnswer)),
+          KD: this.calcPercent(Math.abs(answers.KD - myAnswer)),
+          M: this.calcPercent(Math.abs(answers.M - myAnswer)),
+          SD: this.calcPercent(Math.abs(answers.SD - myAnswer)),
         },
       };
       // We then push our percent questionDistance to our questionDistancesList array

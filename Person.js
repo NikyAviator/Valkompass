@@ -10,5 +10,6 @@ module.exports = class Person {
     console.log(
       `Välkommen ${name}, till Valkompassen 2022! Nedan kommer 30 st frågor. Svara med siffror`
     );
+    return name;
   }
 };
