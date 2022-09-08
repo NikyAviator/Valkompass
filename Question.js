@@ -10,13 +10,30 @@ module.exports = class Question {
   }
 
   async questions() {
-    for (let fraga of questionData) {
+    for (let i = 0; i < questionData.length; i++) {
       const response = await promptly.prompt(
-        `Fråga ${fraga.id} : 
-          ${fraga.question}
+        `Fråga ${questionData[i].id} : 
+          ${questionData[i].question}
           1. Helt emot, 2. Delvis emot, 3. Instämmer delvis, 4. Instämmer helt.\n    SVAR: `
       );
-      this.onesAnswer.push(response);
+      switch (response) {
+        case '1':
+          this.onesAnswer.push(response);
+          break;
+        case '2':
+          this.onesAnswer.push(response);
+          break;
+        case '3':
+          this.onesAnswer.push(response);
+          break;
+        case '4':
+          this.onesAnswer.push(response);
+          break;
+        default:
+          console.log('Error, wrong input, try again!');
+          i--;
+          break;
+      }
     }
     let result = new Result();
     const finalResult = result.compareWithParties(this.onesAnswer);
