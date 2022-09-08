@@ -5,7 +5,6 @@ module.exports = class Question {
   onesAnswer = [];
 
   constructor(settings) {
-    // expecting userName
     Object.assign(this, settings);
   }
 
@@ -40,6 +39,10 @@ module.exports = class Question {
     const sortedFinalResult = Object.fromEntries(
       Object.entries(finalResult).sort(([, a], [, b]) => b - a)
     );
-    console.log(sortedFinalResult);
+    console.log(`Ditt resultat: `);
+    for (const [key, value] of Object.entries(sortedFinalResult)) {
+      console.log(`${key}: ${value}%`);
+    }
+    return sortedFinalResult;
   }
 };
