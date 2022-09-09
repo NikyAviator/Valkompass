@@ -40,5 +40,19 @@ module.exports = class DataHandler {
     }
   }
 
-  serializeResults() {}
+  deSerializeResults() {
+    if (!fs.existsSync('./results.json')) {
+      console.log('Inga resultat ännu!');
+    } else {
+      let resultData = require('./results.json');
+      console.log(resultData);
+    }
+  }
+  removeStoredResults() {
+    if (fs.existsSync('./results.json')) {
+      fs.rmSync('./results.json');
+    } else {
+      console.log('Det finns inget att ta bort!');
+    }
+  }
 };
